@@ -1,7 +1,7 @@
 locations:
-  - location_name: tbd_dagster
+  - location_name: tbd_dagster/tbd_dagster
     code_source:
-      package_name: tbd_dagster.tbd_dagster
+      package_name: tbd_dagster
     working_directory: ./tbd_dagster
     build:
       directory: ./tbd_dagster
