@@ -1,1 +1,6 @@
 /tbd_data
+.gitignore
+.env
+tbd_dagster/tbd_dagster/__pycache__/
+tbd_dagster/tbd_dagster/__pycache__/
+**/__pycache__/

@@ -1,9 +1,10 @@
-from dagster import Definitions, load_assets_from_modules
-
-from . import assets  # noqa: TID252
-
-all_assets = load_assets_from_modules([assets])
+from dagster import Definitions
+from .assets import calendar_events
+from .jobs import calendar_events_job
+from .schedule import calendar_events_schedule
 
 defs = Definitions(
-    assets=all_assets,
+    assets=[calendar_events],
+    jobs=[calendar_events_job],
+    schedules=[calendar_events_schedule]
 )
