@@ -18,7 +18,7 @@ def send_to_slack(events_summary):
         client = WebClient(token=SLACK_TOKEN)
         response = client.chat_postMessage(
             channel=SLACK_CHANNEL,
-            text=":vibe-cat: Upcoming Events :vibe-cat:",
+            text=":vibe-cat: Weekly Race Calendar Update :vibe-cat:",
             blocks=[
                 {
                     "type": "section",
