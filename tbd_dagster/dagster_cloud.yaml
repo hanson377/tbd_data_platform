@@ -1,8 +1,0 @@
-locations:
-  - location_name: tbd_dagster
-    code_source:
-      package_name: tbd_dagster
-    working_directory: ./tbd_dagster
-    build:
-      directory: ./tbd_dagster
-      registry: # Your container registry URL (e.g., docker.io/your-username)
