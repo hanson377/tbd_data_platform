@@ -7,10 +7,7 @@ setup(
         "dagster",
         "dagster-cloud",
         "ics",
-        "arrow",
-        "slack_sdk",
-        "datetime",
-        "os"
+        "slack_sdk"
     ],
     extras_require={"dev": ["dagster-webserver", "pytest"]},
 )

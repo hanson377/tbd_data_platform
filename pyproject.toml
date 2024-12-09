@@ -8,10 +8,7 @@ dependencies = [
     "dagster",
     "dagster-cloud",
     "ics",
-    "arrow",
-    "slack_sdk",
-    "datetime",
-    "os"
+    "slack_sdk"
 ]
 
 [project.optional-dependencies]
