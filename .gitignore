@@ -4,3 +4,5 @@
 tbd_dagster/tbd_dagster/__pycache__/
 tbd_dagster/tbd_dagster/__pycache__/
 **/__pycache__/
+/build
+/tbd_dagster.egg-info
