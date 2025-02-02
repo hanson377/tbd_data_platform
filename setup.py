@@ -7,7 +7,9 @@ setup(
         "dagster",
         "dagster-cloud",
         "ics",
-        "slack_sdk"
+        "slack_sdk",
+        "dlt",
+        "dlt[motherduck]"
     ],
     extras_require={"dev": ["dagster-webserver", "pytest"]},
 )
