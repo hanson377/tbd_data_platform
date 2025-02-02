@@ -8,7 +8,9 @@ dependencies = [
     "dagster",
     "dagster-cloud",
     "ics",
-    "slack_sdk"
+    "slack_sdk",
+    "dlt",
+    "dlt[motherduck]"
 ]
 
 [project.optional-dependencies]
