@@ -40,3 +40,5 @@ def posthog_to_duckdb_schedule():
         run_config={},
         tags={"owner": "data_team"}
     )
+
+## yes
