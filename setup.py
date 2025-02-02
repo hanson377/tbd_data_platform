@@ -10,7 +10,9 @@ setup(
         "slack_sdk",
         "dlt",
         "dlt[motherduck]",
-        "duckdb"
+        "duckdb",
+        "dlt[parquet]",
+        "pyarrow"
     ],
     extras_require={"dev": ["dagster-webserver", "pytest"]},
 )

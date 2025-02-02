@@ -11,7 +11,9 @@ dependencies = [
     "slack_sdk",
     "dlt",
     "dlt[motherduck]",
-    "duckdb"
+    "duckdb",
+    "dlt[parquet]",
+    "pyarrow"
 ]
 
 [project.optional-dependencies]
