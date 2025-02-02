@@ -10,7 +10,8 @@ dependencies = [
     "ics",
     "slack_sdk",
     "dlt",
-    "dlt[motherduck]"
+    "dlt[motherduck]",
+    "duckdb"
 ]
 
 [project.optional-dependencies]
