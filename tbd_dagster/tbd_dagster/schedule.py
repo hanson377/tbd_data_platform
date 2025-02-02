@@ -27,14 +27,13 @@ def new_calendar_events_schedule():
         run_config={},
         tags={"owner": "data_team"}
     )
-
 @schedule(
-    cron_schedule="0 */4 * * *",  # Runs every 4 hours
+    cron_schedule="0 6 * * *",  # Runs every day at 6 AM
     job_name="posthog_to_duckdb_job", 
     execution_timezone="America/New_York"
 )
 def posthog_to_duckdb_schedule():
-    """Schedule for PostHog to DuckDB job - runs every 4 hours"""
+    """Schedule for PostHog to DuckDB job - runs every day at 6 AM"""
     return RunRequest(
         run_key=None,
         run_config={},
