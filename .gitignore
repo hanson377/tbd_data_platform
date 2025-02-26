@@ -8,3 +8,4 @@ tbd_dagster/tbd_dagster/__pycache__/
 /tbd_dagster.egg-info
 .venv/
 tbd_dagster/tbd_dagster/.dlt/secrets.toml
+/venv

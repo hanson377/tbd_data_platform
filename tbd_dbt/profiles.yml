@@ -1,0 +1,10 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path:  "md:dbt?motherduck_token={{env_var('MOTHERDUCK_TOKEN')}}"
+      threads: 4
+      extensions:
+        - httpfs
+        - parquet

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: posthog_source
+    database: my_db
+    schema: posthog_source
+    tables:
+      - name: events
