@@ -31,7 +31,17 @@ def fetch_recent_additions(hours_lookback=24):
             # Check if the event has a created timestamp
             if event.created and arrow.get(event.created) >= recent_threshold:
                 event_time = arrow.get(event.begin)
-                url = event.description.split('"')[1] if event.description else "No URL"
+                
+                # More robust URL extraction
+                url = "No URL"
+                if event.description:
+                    # Try to find a URL in the description
+                    parts = event.description.split('"')
+                    if len(parts) > 1:
+                        url = parts[1]
+                    elif "http" in event.description:
+                        # Fallback: try to find any URL-like string
+                        url = [word for word in event.description.split() if word.startswith("http")][0]
                 
                 # Format the date nicely
                 formatted_date = event_time.format('dddd, MMMM D YYYY')
