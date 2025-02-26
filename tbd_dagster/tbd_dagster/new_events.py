@@ -35,14 +35,16 @@ def fetch_recent_additions(hours_lookback=24):
                 # More robust URL extraction
                 url = "No URL"
                 if event.description:
-                    # Try to find a URL in the description
-                    parts = event.description.split('"')
-                    if len(parts) > 1:
-                        url = parts[1]
+                    # Try to find URL in HTML href attribute
+                    if 'href="' in event.description:
+                        start = event.description.find('href="') + 6
+                        end = event.description.find('"', start)
+                        if start != -1 and end != -1:
+                            url = event.description[start:end]
+                    # Fallback: try to find any URL-like string
                     elif "http" in event.description:
-                        # Fallback: try to find any URL-like string
                         urls = [word for word in event.description.split() if word.startswith("http")]
-                        if urls:  # Only try to access if list is not empty
+                        if urls:
                             url = urls[0]
                 
                 # Format the date nicely
