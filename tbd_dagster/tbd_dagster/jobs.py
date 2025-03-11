@@ -17,5 +17,5 @@ new_calendar_events_job = define_asset_job(
 posthog_to_duckdb_job = define_asset_job(
     name="posthog_to_duckdb_job",
     selection=["elt_posthog_to_duckdb"],
-    tags={"dagster/max_runtime": "1200"}  # 10 minutes timeout
+    tags={"dagster/max_runtime": "2400"}  # 10 minutes timeout
 )
