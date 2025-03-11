@@ -59,7 +59,9 @@ def fetch_calendar():
                         url = parts[1]
                     elif "http" in event.description:
                         # Fallback: try to find any URL-like string
-                        url = [word for word in event.description.split() if word.startswith("http")][0]
+                        urls = [word for word in event.description.split() if word.startswith("http")]
+                        if urls:  # Only try to access first element if list is not empty
+                            url = urls[0]
                 
                 # Format the date nicely
                 formatted_date = event_time.format('dddd, MMMM D YYYY')
