@@ -3,7 +3,7 @@ from .jobs import calendar_events_job, new_calendar_events_job, posthog_to_duckd
 
 
 @schedule(
-    cron_schedule="0 9 * * 1",  # Runs every Monday at 9 AM
+    cron_schedule="30 7 * * 1",  # Runs every monday at 7:30 am est
     job_name="calendar_events_job",
     execution_timezone="America/New_York"
 )
